@@ -1,0 +1,11 @@
+.nav-bar{
+    display: flex;
+    box-shadow: 2px 2px 8px #ddd;
+    margin-bottom: 50px;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

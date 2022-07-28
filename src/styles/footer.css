@@ -1,0 +1,13 @@
+.footer{
+    min-height: 100px;
+    background-color: rgb(231, 219, 219);
+    width: 100%;
+    padding: 0 50px;
+}
+
+.copyright{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
