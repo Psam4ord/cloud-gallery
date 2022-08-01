@@ -1,13 +1,26 @@
 .footer{
-    min-height: 100px;
-    background-color: rgb(231, 219, 219);
     width: 100%;
-    padding: 0 50px;
+    padding: 30px 50px 0 50px ;
+    margin-top: 40px;
+    box-shadow: 0 -2px 30px #bbb;
+    overflow-y: hidden;
 }
 
 .copyright{
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    color: #aaa;
+    border-top: 1px solid #ccc;
+    width: 70%;
     
 }
+
+.sponsors{
+    background-color:yellowgreen;
+}
+
+
+.social-media-icons{
+   
+}
+
