@@ -11,7 +11,6 @@ const FooterBar = () => {
     
     
     <div className='footer'>
-
     <Row>
       <Col  xs={12} md={4} lg={3} className='sponsors' >
         <h5> Sposnsors</h5>
@@ -20,12 +19,9 @@ const FooterBar = () => {
            'Handsome Drizzle',
           '3 Brothers Entertainment'
         ]
-        }   />
-        
-       
-        
-         
+        }/> 
       </Col>
+      
       <Col  xs={12} md={4} lg={3} className='social-media-icons' >
         <h5>Social Media</h5>
             <FooterLinks listItems={[

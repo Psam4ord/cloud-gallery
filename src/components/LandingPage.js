@@ -23,7 +23,7 @@ const Landing= () => {
             </div>
         </div> 
        
-    <section style={{display: 'flex', alignItems: 'center', justifyContent: 'center',  padding: '0 150px'}}>
+    <section style={{display: 'flex', alignItems: 'center', justifyContent: 'center',  padding: '0 50px'}}>
         <Row style={{}}> 
             <Col  xs={12} md={4} lg={3}> 
             <img src={imagecard} alt='pics2' className='image-card'/>
