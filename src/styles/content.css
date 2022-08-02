@@ -8,5 +8,8 @@
 
 .card-img:hover{
     transform: scale(1.02, 1.02);
+}
 
+.img-container-parent{
+    margin-top: 120px;
 }

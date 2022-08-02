@@ -2,7 +2,13 @@ import React from 'react';
 
 
 const styles = {
-  listStyleType: 'none'
+  listStyleType: 'none',
+  padding: 0,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: 15,
+
 }
 
 const FooterLinks = ({listItems}) => {

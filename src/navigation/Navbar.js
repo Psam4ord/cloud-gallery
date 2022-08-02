@@ -5,18 +5,19 @@ import React from "react";
 import '../styles/navbar.css'
 
  
-const NavigationBar = () => {
+             // Props usage
+const NavigationBar = (props) => {
   return (
-      <Navbar bg="" expand="lg" className="nav-bar">
+      <Navbar variant='dark' expand="lg" className="nav-bar">
         <Container className="nav-container">
           <Navbar.Brand href="#Home"> logo</Navbar.Brand>
-          <div>
+          <div className="nav-links">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="#Home">Home</Nav.Link>
+                <Nav.Link href="#Home">{props.navItem[0]}</Nav.Link>
                 
-                <Nav.Link href="#Contacts">Contacts Us</Nav.Link>
+                <Nav.Link href="#Contacts">{props.navItem[1]}</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </div>
@@ -25,5 +26,7 @@ const NavigationBar = () => {
                     
   );
 };
+
+
 
 export default NavigationBar;

@@ -1,7 +1,6 @@
 import React from 'react';
-import NavigationBar from '../navigation/Navbar';
-import FooterBar from '../navigation/Footer';
-import imagecard from '../assets/kerr1.jpg';
+import Layout from '../navigation';
+import imagecard from '../assets/kid-bros.jpg';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 import '../styles/landing.css';
@@ -11,13 +10,14 @@ import '../styles/landing.css';
 
 const Landing= () => {
   return (
+    <Layout navItem={["Login", 'SignUp']}>
     <div>
-        <NavigationBar />
+               {/*passing props */}
         <div className='background-landing-img'>
             <div className='shade'>
                 <h1> MEMORIES NEVER FADE</h1>
                 <div>
-                <h4 className='card-message'>Thought leads to Feelings, Feelings into Actions, Actions into Results</h4>
+                <h4 className='message-card'>Thought leads to Feelings, Feelings into Actions, Actions into Results</h4>
                             
                 </div>
             </div>
@@ -29,7 +29,7 @@ const Landing= () => {
             <img src={imagecard} alt='pics2' className='image-card'/>
             </Col>
             
-            <Col  xs={12} md={4} lg={9} className= 'section-message'>
+            <Col  xs={12} md={4} lg={9} className='section-message'>
                 jskfdjkaf dsjkafjjkfd sk fj jsadffd sfsfs dfasf asfkl sklfsa
                 akjfkd sjf ajs dkfjdsjfs 
                 dsajk fkds fkdaf fjdsk a fkjds afds fkfdj skfjkj sorry
@@ -39,8 +39,8 @@ const Landing= () => {
         </Row>
     </section>
 
-        <FooterBar/ >
     </div>
+    </Layout>
   )
 }
 

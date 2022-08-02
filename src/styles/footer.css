@@ -1,26 +1,30 @@
 .footer{
+    background-color: var(--secondary);
     width: 100%;
     padding: 30px 50px 0 50px ;
-    margin-top: 40px;
     box-shadow: 0 -2px 30px #bbb;
     overflow-y: hidden;
+    color: #91A2B8;
+
 }
 
 .copyright{
     display: flex;
     justify-content: center;
-    color: #aaa;
-    border-top: 1px solid #ccc;
+    color: #91A2B8;
+    border-top: 1px solid #91A2B8;
+    padding-top: 10px;
     width: 70%;
     
 }
 
-.sponsors{
-    
-}
 
 
 .social-media-icons{
-   
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+    gap: 15px ;
 }
 

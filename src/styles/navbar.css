@@ -2,13 +2,23 @@
     display: flex;
     position: fixed !important;
     width: 100%;
-    background-color: #fff;
-    top: 0;
+    background-color: var(--secondary);
+    top:0;
+    position: absolute;
+    z-index: 1;
 
+}
+
+.navbar-brand, .nav-link, .navbar-toggler{
+    color: #91A2B8 !important;
 }
 
 .nav-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+}
+
+.nav-links{
 }

@@ -1,0 +1,35 @@
+.form-card{
+    max-width: 70%;
+    margin: auto;
+    margin-top: 50px;
+   padding: 50px;
+   box-shadow: 1px 1px 10px #ccc;
+   border:  1px solid #ccc;
+   border-radius: 20px 20px;
+}
+
+
+.left-section{
+    display: flex;
+    flex-direction: column;
+    background-color:var(--styling2);
+    border: 1px solid #FCFBF9;
+    background-color: #FCFBF9;
+}
+
+
+.right-section{ 
+    border: 2px solid #FCFBF9;
+    background-color: #FCFBF9;
+}
+
+.left-section-form{
+    display: flex; 
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top:50px;
+}
+
+.right-section img{
+    margin-top: 50px;
+}
