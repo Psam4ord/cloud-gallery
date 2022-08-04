@@ -14,7 +14,7 @@ const ContactForm = () => {
     <Layout navItem={['Login', 'SignUp']} >
 
     <div>
-    
+          {/*form-section*/}
     <Card className='form-card'>  <h1>Contact us</h1> 
     <Row >
     <Col className='left-section' xs={12} md={6} > 
@@ -38,6 +38,8 @@ const ContactForm = () => {
    </Form>
    </Col>
    
+
+                {/*image-section*/}
             <Col className='right-section' xs={12} md={6}>
             <img src={camera} alt='camera' width={'100%'} height={'auto'}/>
             </Col>
