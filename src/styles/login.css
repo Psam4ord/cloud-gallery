@@ -1,15 +1,18 @@
 
-.main-login-form{
-    display: flex;
-    justify-content: center;
-    margin: 90px 50px;
-    
-}
-
-
     .login{
-     width: 450px;
      box-shadow: 2px 2px 10px #ccc;
-     border-radius: 10px;
-     padding: 30px;
+     border-radius: 20px;
+     padding: 50px;
+    }
+    
+    .remember-me-forgot-password{
+        display:flex;
+        flex-direction: row;
+        gap:0px;
+      
+
+    }
+
+    .forgot-password-link{
+        text-decoration: none;
     }

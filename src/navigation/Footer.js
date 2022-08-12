@@ -5,6 +5,7 @@ import '../styles/footer.css';
 import FooterLinks from '../helpers/footer-list';
 import {FaTwitter, FaWhatsapp, FaInstagram, FaLinkedinIn} from 'react-icons/fa';
 
+const links = ['whatsapplink', 'https://twitter.com/home', 'instagramlink', 'linkedlink']
 
 const FooterBar = () => {
   return (
@@ -14,7 +15,7 @@ const FooterBar = () => {
     <Row>  
           <Col  xs={12} className='social-media-icons' >
              <h5>Social Media</h5>
-              <FooterLinks listItems={[
+              <FooterLinks link={links} listItems={[
 
                  <FaWhatsapp/>, 
                    <FaTwitter/>,

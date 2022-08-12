@@ -13,4 +13,4 @@ const Layout = ({children, navItem}) => {
   )
 }
 
-export default Layout
+export default Layout;
