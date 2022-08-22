@@ -81,7 +81,10 @@
    height: auto;
    padding: 50px;
    
-
-
 }
 
+/* media queries */
+/* Mobile phones */
+@media only screen and (min-max) {
+    
+}

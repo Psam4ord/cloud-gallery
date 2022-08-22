@@ -16,7 +16,7 @@ const ForgotPassword = () => {
         <Form className='main-form'>
         <p className='lead fw-bold'> FORGOT PASSWORD </p> 
         <Form.Group className="my-4" controlId="formBasicEmail">
-        <Form.Control type="text" placeholder="Enter username or email" validated/>
+        <Form.Control type="text" placeholder="Enter email" validated/>
         </Form.Group>
         
         <div className='reset-back-btn'>

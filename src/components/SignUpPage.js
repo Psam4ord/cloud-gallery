@@ -12,8 +12,8 @@ import '../styles/SignUp.css';
 const SignUp = () => {
   return (
     <Layout navItem={''}>
-    <Row>
-    <Col className='main-Signup-form'> 
+    <Row >
+    <Col className='main-Signup-form' > 
     <Form  className='Sign-up' validated>
        <p className='lead fw-bold'> SIGN UP </p>
           <Form.Group className="my-3" controlId="formBasicEmail">

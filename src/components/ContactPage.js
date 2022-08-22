@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -10,21 +11,24 @@ import "../styles/contactUs.css";
 
 const ContactForm = () => {
   return (
-    <Layout navItem={["", "", "contact us"]}>
+    <Layout navItem={["", "", "contact"]}>
       <div>
-        {/*form-section*/}
+           {/*form-section*/}
         <Card className="form-card">
           <h1>Contact us</h1>
           <Row>
             <Col className="left-section" xs={12} md={6}>
-              <Form className="left-section-form" validated>
-                <Form.Group className="mb-3">
+              
+            <Form className="left-section-form" validated>
+             
+            <Form.Group className="mb-3">
+                <Form.Control type="text" placeholder="full name" />
+              </Form.Group>
+                
+              <Form.Group className="mb-3">
                   <Form.Control type="email" placeholder="email" />
                 </Form.Group>
 
-                <Form.Group className="mb-3">
-                  <Form.Control type="text" placeholder="full name" />
-                </Form.Group>
 
                 <Form.Group className="mb-3">
                   <Form.Control type="text" placeholder="Organization" />
@@ -39,7 +43,7 @@ const ContactForm = () => {
               </Form>
             </Col>
 
-            {/*image-section*/}
+                     {/*image-section*/}
             <Col className="right-section" xs={12} md={6}>
               <img src={camera} alt="camera" width={"100%"} height={"auto"} />
             </Col>
