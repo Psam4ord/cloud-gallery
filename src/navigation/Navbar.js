@@ -17,11 +17,11 @@ const NavigationBar = (props) => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Link to={"/login"}>
+              <Link to={"/login"} style={{textDecoration:"none"}}>
                 <Nav.Link href="#Login">{props.navItem[0]}</Nav.Link>
               </Link>
 
-              <Link to={"/register"}>
+              <Link to={"/register"} style={{textDecoration:'none'}}>
                 <Nav.Link href="#SignUp">{props.navItem[1]}</Nav.Link>
               </Link>
               <Link to={"/contact-us"}>

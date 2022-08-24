@@ -13,7 +13,7 @@ const ResetPassword = () => {
   return (
 
   
-    <Row style={{display:'flex', justifyContent:'center', flexDirection:'center', margin:'50px'}}>
+    <Row style={{display:'flex', justifyContent:'center', alignItem:'center', flexDirection:'center', margin:'150px' , padding:'10px'}}>
       <Col xs={12} md={6}  lg={4} className="change-password-form">
 
         <Form  id='main-form' validated>
