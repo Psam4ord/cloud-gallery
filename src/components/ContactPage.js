@@ -1,17 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
-import Layout from "../navigation";
 import camera from "../assets/iphone-camera.jpg";
 import "../styles/contactUs.css";
 
 const ContactForm = () => {
   return (
-    <Layout navItem={["", "", "contact"]}>
+   
       <div>
            {/*form-section*/}
         <Card className="form-card">
@@ -34,12 +32,11 @@ const ContactForm = () => {
                   <Form.Control type="text" placeholder="Organization" />
                 </Form.Group>
 
-                <Form.Group className="mb-3">
-                  <Form.Control
-                    type="textarea"
-                    placeholder="enter Message here"
-                  />
-                </Form.Group>
+                
+                <label>
+                <textarea  id="message-content" placeholder="message" />
+              </label>
+              
               </Form>
             </Col>
 
@@ -64,7 +61,6 @@ const ContactForm = () => {
           </Row>
         </Card>
       </div>
-    </Layout>
   );
 };
 

@@ -11,10 +11,12 @@ const ResetPassword = () => {
   const [showPassword, setShowPassword] = useState(false);
   console.log(showPassword);
   return (
-    <Row style={{justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100%'}}>
+
+  
+    <Row style={{display:'flex', justifyContent:'center', flexDirection:'center', margin:'50px'}}>
       <Col xs={12} md={6}  lg={4} className="change-password-form">
-        <Form validated>
-          
+
+        <Form  id='main-form' validated>
             <h2> Change Password</h2>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Control

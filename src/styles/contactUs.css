@@ -1,11 +1,14 @@
 .form-card{
-    max-width: 70%;
+    width: 50%;
     margin: auto;
     margin-top: 50px;
    padding: 50px;
    box-shadow: 1px 1px 10px #ccc;
    border:  1px solid #ccc;
    border-radius: 20px 20px;
+   display: flex;
+   justify-content: center;
+  
 }
 
 
@@ -33,3 +36,13 @@
 .right-section img{
     margin-top: 50px;
 }
+
+#message-content{
+    width: 100%;
+    box-shadow: 1px 1px 10px #ccc;
+    border: 1px solid rgb(146, 228, 153);
+    border-radius: 5px;
+    
+}
+
+        /* mobile */
