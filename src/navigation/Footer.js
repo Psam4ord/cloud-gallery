@@ -12,7 +12,7 @@ import {
 
 const links = [
   "https://wa.link/h7legk",
-  "https://twitter.com/home",
+  "https://twitter.com/kerry1_7",
   "instagramlink",
   "https://www.linkedin.com/in/hayford-sammor-duah-7a8074186/",
 ];
