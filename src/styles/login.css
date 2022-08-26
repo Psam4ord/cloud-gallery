@@ -8,11 +8,8 @@
     .remember-me-forgot-password{
         display:flex;
         flex-direction: row;
-        gap:0px;
+        gap:50px;
       
 
     }
 
-    .forgot-password-link{
-        text-decoration: none;
-    }

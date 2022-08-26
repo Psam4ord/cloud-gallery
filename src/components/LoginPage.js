@@ -1,35 +1,38 @@
 import React, { useState } from "react";
+
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Alert from "react-bootstrap/Alert";
-import { Link } from "react-router-dom";
+import { Link,Location } from "react-router-dom";
 import "../styles/login.css";
 import { loginSchema } from "../validation";
 
 const Login = () => {
-  // states
+  
+          // states
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [alert, showAlert] = useState(false);
-  const [errMsg, setErrMsg] = useState('');
+  const [errMsg, setErrMsg] = useState("");
 
   const handleLogin = (e) => {
     e.preventDefault();
     const { error, value } = loginSchema.validate({
       Email: email,
-      Password: password,
+      Password: password, 
     });
 
     if (error) {
-      showAlert(true)
-      setErrMsg(error.message)
+      showAlert(true);
+      setErrMsg(error.message);
     } else {
-      setErrMsg('Successful')
+      setErrMsg("Successful");
 
       setEmail("");
       setPassword("");
+      
     }
   };
 
@@ -76,10 +79,8 @@ const Login = () => {
               <Form.Check type="checkbox" label="Remember me" />
             </Form.Group>
 
-            <Link to={"/forgotpassword"}>
-              <a href="#" className="forgot-password-link">
+            <Link to={"/forgotpassword"} className ='text-decoration-none '>
                 Forgot password
-              </a>
             </Link>
           </div>
 

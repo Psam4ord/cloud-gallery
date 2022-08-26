@@ -7,7 +7,7 @@ const Layout = ({children, navItem}) => {
   return (
     <div style={{width: '100%', height: '100vh'}}>
         <NavigationBar navItem={navItem}/>
-        <div style={{padding: 70}}>{children}</div>
+        <div style={{padding: 70}}> {children}</div>
         <FooterBar/>
     </div>
   )

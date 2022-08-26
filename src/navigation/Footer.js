@@ -11,10 +11,10 @@ import {
 } from "react-icons/fa";
 
 const links = [
-  "whatsapplink",
+  "https://wa.link/h7legk",
   "https://twitter.com/home",
   "instagramlink",
-  "linkedlink",
+  "https://www.linkedin.com/in/hayford-sammor-duah-7a8074186/",
 ];
 
 const FooterBar = () => {
