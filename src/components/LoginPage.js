@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Alert from "react-bootstrap/Alert";
-import { Link,Location } from "react-router-dom";
+import { Link} from "react-router-dom";
 import "../styles/login.css";
 import { loginSchema } from "../validation";
 
