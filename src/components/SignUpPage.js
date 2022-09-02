@@ -20,7 +20,7 @@ const SignUp = () => {
 
   const handleSignup = (e) => {
     e.preventDefault();
-    const { error, value } = SignupSchema.validate({
+    const { error} = SignupSchema.validate({
       username: username,
       email: email,
       password: password,
@@ -29,26 +29,36 @@ const SignUp = () => {
 
     if (error) {
       showAlert(true);
-      setErrMsg(error.message === '"repeatPassword" must be [ref:password]' ? 'passwords do not match': error.message);
-      setColor(false)
+      setErrMsg(
+        error.message === '"repeatPassword" must be [ref:password]' ? "passwords do not match" : error.message
+      );
+      setColor(false);
     } else {
       setErrMsg("Registration Successful");
-      setColor(true)
+      setColor(true);
       username("");
       email("");
       password("");
       repeatPassword("");
     }
-
   };
 
   return (
     <Row>
       <Col className="main-Signup-form">
         <Form className="Sign-up" validated>
-        <alert 
-        style={{display:alert ? 'block': 'none', padding: 10, borderRadius: 10, color: color ? '#0f5132' : '#842029', backgroundColor : color ? '#d1e7dd' : '#f8d7da'}}
-        > {errMsg}</alert>
+          <alert
+            style={{
+              display: alert ? "block" : "none",
+              padding: 10,
+              borderRadius: 10,
+              color: color ? "#0f5132" : "#842029",
+              backgroundColor: color ? "#d1e7dd" : "#f8d7da",
+            }}
+          >
+            {" "}
+            {errMsg}
+          </alert>
           <p className="lead fw-bold"> SIGN UP </p>
           <Form.Group className="my-3" controlId="formBasicEmail">
             <Form.Control
@@ -60,24 +70,30 @@ const SignUp = () => {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control type="email"
-            value={email}
-            onChange={(e)=> setEmail(e.target.value)}
-            placeholder="email" />
+            <Form.Control
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="email"
+            />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Control type="password"
-            value={password}
-            onChange={(e)=> setPassword(e.target.value)}
-            placeholder="Password" />
+            <Form.Control
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Password"
+            />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Control type="password"
-            value={repeatPassword}
-            onChange={(e)=>setRepeatPassword(e.target.value)}
-            placeholder="Confirm password" />
+            <Form.Control
+              type="password"
+              value={repeatPassword}
+              onChange={(e) => setRepeatPassword(e.target.value)}
+              placeholder="Confirm password"
+            />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicCheckbox">

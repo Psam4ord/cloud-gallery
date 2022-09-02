@@ -17,7 +17,7 @@ const ForgotPassword = () => {
 
   const handleEmail = (e) => {
     e.preventDefault();
-    const { error, value } = forgotPasswordSchema.validate({
+    const { error } = forgotPasswordSchema.validate({
       email: email,
     });
 
@@ -47,13 +47,16 @@ const ForgotPassword = () => {
       </Col>
           <p className="lead fw-bold"> FORGOT PASSWORD </p>
           <Form.Group className="my-4" controlId="formBasicEmail">
-            <Form.Control type="text" placeholder="Enter email" validated />
+            <Form.Control type="text" 
+            value={email}
+            onChange ={(e)=>setEmail(e.target.value)}
+            placeholder="Enter email" validated />
           </Form.Group>
 
           <div className="reset-back-btn">
+
             <Button className="text-center" onClick={handleEmail}>
-           
-              Reset password
+            Reset password
             </Button>
             <Link to={"/"} className="go-back">
               <h6>

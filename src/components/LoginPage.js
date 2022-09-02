@@ -19,7 +19,7 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    const { error, value } = loginSchema.validate({
+    const { error } = loginSchema.validate({
       Email: email,
       Password: password, 
     });

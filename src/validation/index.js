@@ -15,7 +15,7 @@ export const loginSchema = Joi.object({
 export const registerSchema = Joi.object({
   username: Joi.string().alphanum().min(3).max(30).required(),
 
-  password: Joi.string().pattern(new RegExp("^[a-zA-Z0-9]{3,30}$")),
+  password: Joi.string().pattern(new RegExp("^[a-zA-Z0-9]{3,30}$")).min(8).required(),
 
   repeat_password: Joi.ref("password"),
 
@@ -32,14 +32,14 @@ export const SignupSchema = Joi.object({
     minDomainSegments: 2,
     tlds: { allow: ["com", "net", "org"] },
   }),
-  password: Joi.string().pattern(new RegExp("^[a-zA-Z0-9]{3,30}$")),
+  password: Joi.string().pattern(new RegExp("^[a-zA-Z0-9]{3,30}$")).min(8).required(),
   repeatPassword: Joi.ref("password"),
 
 });
 
 
 export const resetPasswordSchema =Joi.object({
-  password: Joi.string().pattern(new RegExp("^[a-zA-Z0-9]{3,30}$")),
+  password: Joi.string().pattern(new RegExp("^[a-zA-Z0-9]{3,30}$")).min(8).required(),
 
   repeat_password: Joi.ref("password"),
 
