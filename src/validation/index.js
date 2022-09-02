@@ -26,15 +26,14 @@ export const registerSchema = Joi.object({
 });
 
 export const SignupSchema = Joi.object({
-  username: Joi.string().alphanum().min(3).max(30).required(),
+  username: Joi.string().min(3).max(30).required(),
   
   email: Joi.string().email({
     minDomainSegments: 2,
     tlds: { allow: ["com", "net", "org"] },
   }),
   password: Joi.string().pattern(new RegExp("^[a-zA-Z0-9]{3,30}$")),
-
-  repeat_password: Joi.ref("password"),
+  repeatPassword: Joi.ref("password"),
 
 });
 
@@ -56,10 +55,10 @@ export const forgotPasswordSchema =Joi.object({
 
 // contact-us form --email validation--
 export const contactSchema =Joi.object({
-  email: Joi.string().email({
-    minDomainSegments: 2,
-    tlds: { allow: ["com", "net", "org"] },
-  }),
+  username: Joi.string().min(3).max(30).required(),
+  organization: Joi.string().min(3).max(40).required(),
+  email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ["com", "net", "org"] },}),
+  msg: Joi.string().max(100),
 
 });
 

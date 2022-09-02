@@ -28,7 +28,7 @@ const Login = () => {
       showAlert(true);
       setErrMsg(error.message);
     } else {
-      setErrMsg("Successful");
+      setErrMsg(" Login Successful");
 
       setEmail("");
       setPassword("");
@@ -49,7 +49,7 @@ const Login = () => {
     >
       <Alert
         key={1}
-        variant={"danger"}
+        variant={"success"}
         style={{ display: alert ? "block" : "none" }}
       >
         {errMsg}
