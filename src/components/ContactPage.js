@@ -19,7 +19,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { error, value } = contactSchema.validate({
+    const { error } = contactSchema.validate({
       username: username,
       email: email,
       organization: organization, 
@@ -80,6 +80,7 @@ const ContactForm = () => {
               <label>
                 <textarea id="message-content" 
                 onChange={(e) => setMsg(e.target.value)}
+                value={msg}
                 placeholder="message" />
               </label>
             </Form>

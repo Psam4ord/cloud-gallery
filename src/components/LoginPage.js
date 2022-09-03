@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Alert from "react-bootstrap/Alert";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles/login.css";
 import { loginSchema } from "../validation";
 
 const Login = () => {
-  
-          // states
+  const navigate = useNavigate();
+  // states
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [alert, showAlert] = useState(false);
@@ -21,7 +21,7 @@ const Login = () => {
     e.preventDefault();
     const { error } = loginSchema.validate({
       Email: email,
-      Password: password, 
+      Password: password,
     });
 
     if (error) {
@@ -29,10 +29,10 @@ const Login = () => {
       setErrMsg(error.message);
     } else {
       setErrMsg(" Login Successful");
-
+      // to homepage
+      navigate("/home");
       setEmail("");
       setPassword("");
-      
     }
   };
 
@@ -79,8 +79,8 @@ const Login = () => {
               <Form.Check type="checkbox" label="Remember me" />
             </Form.Group>
 
-            <Link to={"/forgotpassword"} className ='text-decoration-none '>
-                Forgot password
+            <Link to={"/forgotpassword"} className="text-decoration-none ">
+              Forgot password
             </Link>
           </div>
 

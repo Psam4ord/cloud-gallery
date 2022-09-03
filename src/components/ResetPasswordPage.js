@@ -57,7 +57,7 @@ const ResetPassword = () => {
               </p>
             </Form.Group>
          
-          <Buttun>Submit </Buttun>
+          <Buttun>Reset password </Buttun>
         </Form>
       </Col>
     </Row>

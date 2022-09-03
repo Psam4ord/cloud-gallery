@@ -58,7 +58,7 @@ export const contactSchema =Joi.object({
   username: Joi.string().min(3).max(30).required(),
   organization: Joi.string().min(3).max(40).required(),
   email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ["com", "net", "org"] },}),
-  msg: Joi.string().max(100),
+  msg: Joi.string().max(150),
 
 });
 

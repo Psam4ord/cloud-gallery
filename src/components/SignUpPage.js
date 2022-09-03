@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { SignupSchema } from "../validation";
+import {useNavigate} from "react-router-dom";
 import Alert from "react-bootstrap/Alert";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -10,13 +11,14 @@ import { Link } from "react-router-dom";
 import "../styles/SignUp.css";
 
 const SignUp = () => {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [repeatPassword, setRepeatPassword] = useState("");
-  const [alert, showAlert] = useState(false);
-  const [errMsg, setErrMsg] = useState("");
-  const [color, setColor] = useState(false);
+  const navigate = useNavigate();
+  const [username, setUsername] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [repeatPassword, setRepeatPassword] = useState("")
+  const [alert, showAlert] = useState(false)
+  const [errMsg, setErrMsg] = useState("")
+  const [color, setColor] = useState(false)
 
   const handleSignup = (e) => {
     e.preventDefault();
@@ -28,18 +30,19 @@ const SignUp = () => {
     });
 
     if (error) {
-      showAlert(true);
+      showAlert(true)
       setErrMsg(
         error.message === '"repeatPassword" must be [ref:password]' ? "passwords do not match" : error.message
       );
-      setColor(false);
+      setColor(false)
     } else {
-      setErrMsg("Registration Successful");
-      setColor(true);
-      username("");
-      email("");
-      password("");
-      repeatPassword("");
+      setErrMsg("Registration Successful")
+      setColor(true)
+      navigate('/login')
+      username("")
+      email("")
+      password("")
+      repeatPassword("")
     }
   };
 
@@ -47,7 +50,7 @@ const SignUp = () => {
     <Row>
       <Col className="main-Signup-form">
         <Form className="Sign-up" validated>
-          <alert
+          <Alert
             style={{
               display: alert ? "block" : "none",
               padding: 10,
@@ -56,9 +59,8 @@ const SignUp = () => {
               backgroundColor: color ? "#d1e7dd" : "#f8d7da",
             }}
           >
-            {" "}
             {errMsg}
-          </alert>
+          </Alert>
           <p className="lead fw-bold"> SIGN UP </p>
           <Form.Group className="my-3" controlId="formBasicEmail">
             <Form.Control
@@ -101,7 +103,7 @@ const SignUp = () => {
           </Form.Group>
 
           <Button variant="primary" type="submit" onClick={handleSignup}>
-            SignUp
+            Register
           </Button>
 
           <h6 className="d-block text-center">Already a member? </h6>

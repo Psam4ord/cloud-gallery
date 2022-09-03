@@ -27,8 +27,8 @@ const NavigationBar = (props) => {
               <Link to={"/register"} style={{ textDecoration: "none" }}>
                 <Nav.Link href="#SignUp">{props.navItem[1]}</Nav.Link>
               </Link>
-              <Link to={"/contact-us"}>
-                <Nav.Link href="#">{props.navItem[2]}</Nav.Link>
+              <Link to={"/contact"}>
+                <Nav.Link href="#contact">{props.navItem[2]}</Nav.Link>
               </Link>
             </Nav>
           </Navbar.Collapse>
