@@ -7,7 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import ResetPassword from "./components/ResetPasswordPage";
 import Content from "./components/Content";
 
-import "./styles/colorCamp.css";
+import "./styles/colorCamp.css";  
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {

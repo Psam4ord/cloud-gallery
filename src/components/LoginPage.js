@@ -79,7 +79,7 @@ const Login = () => {
               <Form.Check type="checkbox" label="Remember me" />
             </Form.Group>
 
-            <Link to={"/forgotpassword"} className="text-decoration-none ">
+            <Link to={"/forgotpassword"} className="text-decoration-none " style={{color:'#198754'}}>
               Forgot password
             </Link>
           </div>
@@ -91,7 +91,7 @@ const Login = () => {
           <h6 className="d-block text-center">Don't have an account? </h6>
           <Link to={"/register"}>
             <Button className="d-block text-center text-decoration-none fw-bold mx-auto">
-              Signup
+              Register
             </Button>
           </Link>
         </Form>

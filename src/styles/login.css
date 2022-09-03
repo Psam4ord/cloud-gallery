@@ -13,3 +13,23 @@
 
     }
 
+                    /* mobile view */
+        /* xs screen */
+        @media only screen and (max-width:320px){
+            .login{
+                width:300px;
+                box-sizing: border-box;
+                padding: 50px 20px;
+            }
+
+            form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+    
+        
+            
+            
+        }

@@ -46,7 +46,7 @@ const ContactForm = () => {
           {error}
         </Alert>
 
-        <h1>Contact us</h1>
+        <h2>Contact us</h2>
         <Row>
           <Col className="left-section" xs={12} md={6}>
             <Form className="left-section-form" validated>
@@ -81,7 +81,7 @@ const ContactForm = () => {
                 <textarea id="message-content" 
                 onChange={(e) => setMsg(e.target.value)}
                 value={msg}
-                placeholder="How may we help?" />
+                placeholder="How may we help  ?" />
               </label>
             </Form>
           </Col>

@@ -18,7 +18,7 @@ const Content = () => {
           return (
             <Col xs={12} md={4} lg={3} key={index}>
               <Card className="card-img">
-                <Img src={item} className="" />
+                <Img src={item} />
               </Card>
             </Col>
           );
