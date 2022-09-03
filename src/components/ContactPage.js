@@ -81,7 +81,7 @@ const ContactForm = () => {
                 <textarea id="message-content" 
                 onChange={(e) => setMsg(e.target.value)}
                 value={msg}
-                placeholder="message" />
+                placeholder="How may we help?" />
               </label>
             </Form>
           </Col>

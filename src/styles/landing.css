@@ -105,5 +105,15 @@
     html{
       margin:0px !important;
     }
+
+    @media only screen and (max-width: 320px){
+  h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 50px !important;
+        padding: 0 10px;
+      }
+    }
   }
   
