@@ -47,7 +47,7 @@ const SignUp = () => {
   };
 
   return (
-    <Row>
+    <Row className="bg-color">
       <Col className="main-Signup-form">
         <Form className="Sign-up" validated>
           <Alert

@@ -12,10 +12,10 @@ const ResetPassword = () => {
   console.log(showPassword);
   return (
 
-  
-    <Row style={{display:'flex', justifyContent:'center', alignItem:'center', flexDirection:'center', margin:'150px' , padding:'10px'}}>
-      <Col xs={12} md={6}  lg={4} className="change-password-form">
 
+    <div id="bg-color">
+    <Row>
+      <Col xs={12} md={6}  lg={4} style={{margin:0}}>
         <Form  id='main-form' validated>
             <h2> Change Password</h2>
             <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -60,8 +60,10 @@ const ResetPassword = () => {
           <Buttun>Reset password </Buttun>
         </Form>
       </Col>
-    </Row>
-  );
-};
-
-export default ResetPassword;
+      </Row>
+      </div>
+      );
+    };
+    
+    export default ResetPassword;
+    
