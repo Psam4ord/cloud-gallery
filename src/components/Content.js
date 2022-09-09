@@ -11,7 +11,7 @@ import Layout from "../navigation";
 const { Img } = Card;
 const Content = () => {
   return (
-    <Layout navItem={['', '', 'contact us']}>
+    <Layout navItem={['', '', 'contact us', 'profile']}>
     <Container className="img-container-parent">
     <Row className="img-container-children">
         {images.map((item, index) => {

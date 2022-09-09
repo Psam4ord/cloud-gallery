@@ -2,7 +2,7 @@
     background-color: var(--secondary);
 }
     .login{
-    
+    box-shadow: 2px 2px 10px #ccc;
      border-radius: 20px;
      padding: 50px;
      background-color: #fff;

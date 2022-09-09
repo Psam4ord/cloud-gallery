@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { contactSchema } from "../validation";
 import Alert from "react-bootstrap/Alert";
+import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -15,14 +16,14 @@ const ContactForm = () => {
   const [organization, setOrganization] = useState("");
   const [alert, showAlert] = useState(false);
   const [error, setErrormessage] = useState("");
-  const [msg, setMsg]= useState("");
+  const [msg, setMsg] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const { error } = contactSchema.validate({
       username: username,
       email: email,
-      organization: organization, 
+      organization: organization,
       msg: msg,
     });
 
@@ -54,7 +55,7 @@ const ContactForm = () => {
                 <Form.Control
                   type="text"
                   value={username}
-                  onChange={(e)=> setUsername(e.target.value)}
+                  onChange={(e) => setUsername(e.target.value)}
                   placeholder="full name"
                 />
               </Form.Group>
@@ -63,7 +64,7 @@ const ContactForm = () => {
                 <Form.Control
                   type="email"
                   value={email}
-                  onChange={(e)=> setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="email"
                 />
               </Form.Group>
@@ -77,12 +78,14 @@ const ContactForm = () => {
                 />
               </Form.Group>
 
-              <label>
-                <textarea id="message-content" 
-                onChange={(e) => setMsg(e.target.value)}
-                value={msg}
-                placeholder="How may we help  ?" />
-              </label>
+              <InputGroup>
+                <Form.Control
+                as="textarea" aria-label="With textarea"
+                  onChange={(e) => setMsg(e.target.value)}
+                  value={msg}
+                  placeholder="How may we help  ?"
+                />
+              </InputGroup>
             </Form>
           </Col>
 

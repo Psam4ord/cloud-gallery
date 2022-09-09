@@ -87,6 +87,10 @@ const SignUp = () => {
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Password"
             />
+            <Form.Text id="passwordHelpBlock" muted>
+            Your password must be 8-20 characters long,  special characters,   contain letters and numbers,
+            and must not contain spaces, or emoji.
+          </Form.Text>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">

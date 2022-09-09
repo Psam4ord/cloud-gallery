@@ -29,7 +29,8 @@ const NavigationBar = (props) => {
               </Link>
               <Link to={"/contact"} style={{ textDecoration: "none" }}>
                 <Nav.Link href="#contact" >{props.navItem[2]}</Nav.Link>
-              </Link>
+                </Link>
+                <Nav.Link href="#profile" id="user-profile">{props.navItem[3]}</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </div>
