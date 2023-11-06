@@ -1,0 +1,39 @@
+.bg-color{
+    background-color: var(--secondary);
+}
+    .login{
+    box-shadow: 2px 2px 10px #ccc;
+     border-radius: 20px;
+     padding: 50px;
+     background-color: #fff;
+     position: relative;
+     z-index:1;
+    }
+    
+    .remember-me-forgot-password{
+        display:flex;
+        flex-direction: row;
+        gap:50px;
+
+    }
+
+                    /* mobile view */
+        /* xs screen */
+        @media only screen and (max-width:320px){
+            .login{
+                width:300px;
+                box-sizing: border-box;
+                padding: 50px 20px;
+            }
+
+            form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+    
+        
+            
+            
+        }

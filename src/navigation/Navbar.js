@@ -2,27 +2,40 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import React from "react";
-import '../styles/navbar.css'
+import { Link } from "react-router-dom";
+import "../styles/navbar.css";
+import myLogo from "../assets/logo.jpg";
 
- 
-const NavigationBar = () => {
+// Props usage
+const NavigationBar = (props) => {
   return (
-      <Navbar bg="" expand="lg" className="nav-bar">
-        <Container className="nav-container">
-          <Navbar.Brand href="#Home"> logo</Navbar.Brand>
-          <div>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
-                <Nav.Link href="#Home">Home</Nav.Link>
-                
-                <Nav.Link href="#Contacts">Contacts Us</Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </div>
-        </Container>
-      </Navbar>
-                    
+    <Navbar variant="dark" expand="lg" className="nav-bar">
+      <Container className="nav-container">
+        <Link to={"/"} style={{ textDecoration: "none" }}>
+          <Navbar.Brand href="#Home">
+            <img src={myLogo} alt="logo-design" className="Logo-img" />
+          </Navbar.Brand>
+        </Link>
+        <div className="nav-links">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Link to={"/login"} style={{ textDecoration: "none" }}>
+                <Nav.Link href="#Login">{props.navItem[0]}</Nav.Link>
+              </Link>
+
+              <Link to={"/register"} style={{ textDecoration: "none" }}>
+                <Nav.Link href="#SignUp">{props.navItem[1]}</Nav.Link>
+              </Link>
+              <Link to={"/contact"} style={{ textDecoration: "none" }}>
+                <Nav.Link href="#contact" >{props.navItem[2]}</Nav.Link>
+                </Link>
+                <Nav.Link href="#profile" id="user-profile">{props.navItem[3]}</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </div>
+      </Container>
+    </Navbar>
   );
 };
 

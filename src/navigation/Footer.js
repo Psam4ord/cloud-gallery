@@ -1,34 +1,47 @@
-import React from 'react';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import React from "react";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import "../styles/footer.css";
+import FooterLinks from "../helpers/footer-list";
+import {
+  FaTwitter,
+  FaWhatsapp,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
-import '../styles/footer.css';
-
+const links = [
+  "https://wa.link/h7legk",
+  "https://twitter.com/kerry1_7",
+  "instagramlink",
+  "https://www.linkedin.com/in/hayford-sammor-duah-7a8074186/",
+];
 
 const FooterBar = () => {
   return (
-    
-    
-    <div className='footer'>
+    <div className="footer">
+      <Row>
+        <Col xs={12} className="social-media-icons">
+          <h5>Social Media</h5>
+          <FooterLinks
+            link={links}
+            listItems={[
+              <FaWhatsapp />,
+              <FaTwitter />,
+              <FaInstagram />,
+              <FaLinkedinIn />,
+            ]}
+          />
+        </Col>
+      </Row>
 
-    <Row>
-      <Col  xs={12} md={4} lg={3} >
-        <h5> Sposnsors</h5>
-      </Col>
-      <Col  xs={12} md={4} lg={3} >
-        <h5>Social Media</h5>
-      </Col>
-      <Col  xs={12} md={4} lg={3} >
-        <h5> Terms</h5>
-      </Col>
-      <Col  xs={12} md={4} lg={3} >
-        <h5> Privacy Policy</h5>
-      </Col>
-    </Row>
-    
+      <Row>
+        <Col className="copyright" xs={12}>
+          <h6>&copy; Copyright 2022. All Rights Reserved. </h6>
+        </Col>
+      </Row>
     </div>
-    )
-  }
-  // <h6 className='copyright' >&copy; 2022 </h6>
+  );
+};
 
 export default FooterBar;
